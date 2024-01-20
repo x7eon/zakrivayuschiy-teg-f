@@ -4,3 +4,40 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light{
+	--background-color: var(--white, #fff);
+	--accent-color: var(--black, #000);
+	--weight-text: 400;
+  --weight-title: 700;
+	--background-image: repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px), repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px), linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
+	--elastic-width: clamp(375px, 100%, 700px);
+	--button-text-color: var(--white, #fff);
+	--mix-blend-mod: hard-light;
+	--heart-countur: var(--accent-color);
+}
+
+:root.theme-dark{
+	--background-color: var(--black, #000);
+	--accent-color: var(--green, #00CC14);
+	--weight-text: 465;
+  --weight-title: 785;
+	--background-image: repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px), repeating-linear-gradient(transparent 0px 2px, #d3d3d3 2px 4px), linear-gradient(#007f0c, #004306);
+	--mix-blend-mod: lighter;
+	--button-text-color: var(--accent-color, #00CC14);
+	--heart-countur: var(--accent-color);
+
+}
+
+@media (prefers-color-scheme: dark){
+	:root{
+		--background-color: var(--black, #000);
+		--accent-color: var(--green, #00CC14);
+		--weight-text: 465;
+		--weight-title: 785;
+		--background-image: repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px), repeating-linear-gradient(transparent 0px 2px, #d3d3d3 2px 4px), linear-gradient(#007f0c, #004306);
+		--mix-blend-mod: lighter;
+		--button-text-color: var(--accent-color, #00CC14);
+		--heart-countur: var(--accent-color);
+	}
+}

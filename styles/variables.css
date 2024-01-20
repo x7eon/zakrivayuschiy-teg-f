@@ -1,1 +1,24 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --white: #fff;
+  --black: #000;
+  --green: #00CC14;
+  --red: #FF0000;
+
+  --main-font: Inter-Variable;
+  --accent-font: PressStart2P;
+  --weight-text: 400;
+  --weight-title: 700;
+  --background-color: var(--white, #fff);
+  --accent-color: var(--black, #000);
+  --background-image: repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px), repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px), linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
+  --elastic-width: clamp(375px, 100%, 700px);
+  --mix-blend-mod: hard-light;
+
+  --button-text-color: var(--background-color, #fff);
+  
+  --heart-countur: var(--accent-color);
+  --heart-sparks: var(--accent-color);
+  --heart-core: var(--accent-color);
+  --heart-body: var(--accent-color);
+}
