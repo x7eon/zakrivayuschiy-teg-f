@@ -64,10 +64,10 @@ ol {
   outline: none;
 }
 
-.button:focus {
-  outline: none;  
-}
-
 .card__icon-button:focus {
   outline: none;
+}
+
+.button:focus {
+  outline: none;  
 }
