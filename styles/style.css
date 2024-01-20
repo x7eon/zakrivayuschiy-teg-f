@@ -193,11 +193,8 @@
 }
 
 .card__wrapper {
-  margin-block-end: 22px;
-}
-
-.card__wrapper {
   position: relative;
+  margin-block-end: 22px;
 }
 
 .card__label {
