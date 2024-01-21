@@ -38,7 +38,7 @@
 		--weight-title: 785;
 		--background-image: repeating-linear-gradient(90deg, #000 0px 2px, transparent 2px 4px), repeating-linear-gradient(transparent 0px 2px, #000 2px 4px), linear-gradient(#007f0c, #004306);
 		--mix-blend-mod: lighter;
-		--button-text-color: var(--accent-color, #00cc14); 
+		--button-text-color: var(--accent-color, #00cc14);
 		--heart-countur: var(--accent-color, ##00cc14);
 	}
 }
