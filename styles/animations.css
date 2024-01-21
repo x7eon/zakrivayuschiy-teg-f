@@ -16,8 +16,8 @@
 /* ДО */
 
 .like-icon .sparks {
-  --heart-sparks: var(--red, #FF0000);
-  fill: var(--heart-sparks);
+  --heart-sparks: var(--red, #ff0000);
+  fill: var(--heart-sparks, #000);
   opacity: 0;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .like-icon .countur {
-  fill: var(--heart-countur);
+  fill: var(--heart-countur, #000);
   transition: fill 0.1s linear;
 }
 
@@ -55,31 +55,31 @@
 /* ACTIVE */
 
 .like-icon:active .core {
-  --heart-core: var(--red, #FF0000);
+  --heart-core: var(--red, #ff0000);
   transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
-  --heart-body: var(--red, #FF0000);
+  --heart-body: var(--red, #ff0000);
   transition: fill 0.3s linear 0.05s;
 }
 
 /* CLICK */
 
 .like-icon.is-liked .core {
-  --heart-core: var(--red, #FF0000);
-  fill: var(--heart-core);
+  --heart-core: var(--red, #ff0000);
+  fill: var(--heart-core, #ff0000);
   transition: fill 0.3s linear;;
 }
 
 .like-icon.is-liked .main-body {
-  --heart-body: var(--red, #FF0000);
-  fill: var(--heart-body);
+  --heart-body: var(--red, #ff0000);
+  fill: var(--heart-body, #ff0000);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .countur {
-  --heart-countur: var(--red, #FF0000);
+  --heart-countur: var(--red, #ff0000); 
   transition: fill 0.3s linear 0.06s;
 }
 

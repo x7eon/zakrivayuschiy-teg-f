@@ -5,8 +5,8 @@
   --green: #00CC14;
   --red: #FF0000;
 
-  --main-font: Inter-Variable;
-  --accent-font: PressStart2P;
+  --main-font: 'Inter-Variable', sans-serif;
+  --accent-font: 'PressStart2P', fantasy;
   --weight-text: 400;
   --weight-title: 700;
   --background-color: var(--white, #fff);
