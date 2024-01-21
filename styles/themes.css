@@ -30,6 +30,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
+	
 	:root {
 		--background-color: var(--black, #000);
 		--accent-color: var(--green, #00cc14);
