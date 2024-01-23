@@ -16,8 +16,8 @@
 /* ДО */
 
 .like-icon .sparks {
-  --heart-sparks: var(--red, #ff0000);
-  fill: var(--heart-sparks, #000);
+  --heart-sparks: var(--red, #f00);
+  fill: var(--heart-sparks, #f00);
   opacity: 0;
 }
 
@@ -41,7 +41,7 @@
 .like-icon:hover .core {
   fill: var(--heart-core, #000);
   transition: fill 0.3s linear;
-} 
+}
 
 .like-icon:hover .main-body {
   fill: var(--heart-body, #000);
@@ -55,31 +55,31 @@
 /* ACTIVE */
 
 .like-icon:active .core {
-  --heart-core: var(--red, #ff0000);
+  --heart-core: var(--red, #f00);
   transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
-  --heart-body: var(--red, #ff0000);
+  --heart-body: var(--red, #f00);
   transition: fill 0.3s linear 0.05s;
 }
 
 /* CLICK */
 
 .like-icon.is-liked .core {
-  --heart-core: var(--red, #ff0000);
-  fill: var(--heart-core, #ff0000);
-  transition: fill 0.3s linear;;
+  --heart-core: var(--red, #f00);
+  fill: var(--heart-core, #f00);
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
-  --heart-body: var(--red, #ff0000);
-  fill: var(--heart-body, #ff0000);
+  --heart-body: var(--red, #f00);
+  fill: var(--heart-body, #f00);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .countur {
-  --heart-countur: var(--red, #ff0000);
+  --heart-countur: var(--red, #f00);
   transition: fill 0.3s linear 0.06s;
 }
 
@@ -119,7 +119,7 @@
 }
 
 @keyframes sparks-opacity {
-  
+
   from {
     opacity: 0;
   }

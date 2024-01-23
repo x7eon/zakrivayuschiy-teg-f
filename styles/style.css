@@ -29,12 +29,8 @@
   cursor: pointer;
 }
 
-.button__text {
-  position: relative;
-  color: var(--button-text-color, #fff);
-  font-family: var(--accent-font, 'PressStart2P', fantasy);
-  font-size: 14px;
-  mix-blend-mode: difference;
+.button:focus {
+  outline: none;
 }
 
 .button:focus-visible {
@@ -43,7 +39,7 @@
 }
 
 .button::before {
-  content: "";
+  content: '';
   position: absolute;
   display: inline-block;
   background-color: var(--accent-color, #000);
@@ -56,6 +52,14 @@
 
 .button:hover::before {
   transform: scaleX(1);
+}
+
+.button__text {
+  position: relative;
+  color: var(--button-text-color, #fff);
+  font-family: var(--accent-font, 'PressStart2P', fantasy);
+  font-size: 14px;
+  mix-blend-mode: difference;
 }
 
 .elastic-width {
@@ -72,13 +76,18 @@
   font-family: var(--main-font, 'Inter', sans-serif);
   font-size: 18px;
   background-color: var(--background-color, #fff);
-  background-image: var(--background-image, repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px), repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px), linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%));
+  background-image: var(
+    --background-image,
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%)
+  );
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wght" var(--weight-text, 400);
+  font-variation-settings: 'wght' var(--weight-text, 400);
 }
 
 .header {
@@ -126,17 +135,21 @@
 }
 
 .theme-menu__button::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 16px;
   right: 0;
- /*  inset: 0; */
   display: inline-block;
   background-color: var(--accent-color, #000);
   transform: scaleX(0);
   transform-origin: left;
   inline-size: 100%;
   block-size: 2px;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -155,7 +168,7 @@
 }
 
 .theme-menu__button:disabled::before {
-  content: "▶";
+  content: '▶';
   display: inline-block;
   margin-right: -8px;
   margin-left: -20px;
@@ -184,7 +197,7 @@
   padding: 4px 10px;
   font-size: 18px;
   letter-spacing: 0.01em;
-  font-variation-settings: "wght" var(--weight-title, 700);
+  font-variation-settings: 'wght' var(--weight-title, 700);
 }
 
 .card__wrapper {
@@ -201,10 +214,15 @@
   font-family: var(--accent-font, 'PressStart2P', fantasy);
   font-size: 14px;
   text-transform: uppercase;
-  text-shadow: 0 0 1px var(--background-color, #fff), 0 0 1px var(--background-color, #fff),
-    0 0 2px var(--background-color, #fff), 0 0 3px var(--background-color, #fff),
-    0 0 4px var(--background-color, #fff), 0 0 5px var(--background-color, #fff),
-    0 0 6px var(--background-color, #fff), 0 0 7px var(--background-color, #fff);
+  text-shadow:
+    0 0 1px var(--background-color, #fff),
+    0 0 1px var(--background-color, #fff),
+    0 0 2px var(--background-color, #fff),
+    0 0 3px var(--background-color, #fff),
+    0 0 4px var(--background-color, #fff),
+    0 0 5px var(--background-color, #fff),
+    0 0 6px var(--background-color, #fff),
+    0 0 7px var(--background-color, #fff);
   mix-blend-mode: var(--mix-blend-mod, hard-light);
 }
 
@@ -242,10 +260,14 @@
 }
 
 .card__icon-button {
+  outline: 2px solid transparent;
   cursor: pointer;
   inline-size: 39px;
   block-size: 35px;
-  outline: 2px solid transparent;
+}
+
+.card__icon-button:focus {
+  outline: none;
 }
 
 .card__icon-button:focus-visible {
@@ -256,6 +278,10 @@
 .card__like-button {
   inline-size: 130px;
   block-size: 38px;
+}
+
+.card__like-button:focus {
+  outline: none;
 }
 
 .button-save {
@@ -273,7 +299,7 @@
 .dialog {
   border: 2px solid var(--accent-color, #000);
   padding: 29.5px;
-  color: var(--accent-color);
+  color: var(--accent-color, #000);
   background-color: var(--background-color, #fff);
 }
 
@@ -348,6 +374,7 @@
 
 @supports (text-stroke: 1px var(--background-color, #fff)) or
   (-webkit-text-stroke: 1px var(--background-color, #fff)) {
+
   .card__label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--background-color, #fff);
@@ -356,13 +383,14 @@
 }
 
 @media (width <= 450px) {
+
   .button {
     flex-direction: column;
   }
 
   .dialog {
-    max-inline-size: 341px;
     padding-inline: 40px;
+    max-inline-size: 341px;
   }
 
   .dialog__icon {

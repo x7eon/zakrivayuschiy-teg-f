@@ -1,0 +1,21 @@
+{
+  "name": "zakrivayuschiy-teg-f",
+  "version": "1.0.0",
+  "description": "Подготовлен проект \"Закрывающий тег\" https://github.com/x7eon/zakrivayuschiy-teg-f.git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Привет!",
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format": "prettier --write './**/*.{html,css,js}'",
+    "lint": "stylelint **/*.css",
+    "lintfix": "stylelint **/*.css --fix",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run format && npm run lintfix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.2.4",
+    "stylelint": "^16.2.0"
+  }
+}

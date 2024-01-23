@@ -54,21 +54,3 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-
-.theme-menu__button:focus {
-  outline: none;
-  opacity: 0.6;
-}
-
-.card__like-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.button:focus {
-  outline: none;
-}
-
